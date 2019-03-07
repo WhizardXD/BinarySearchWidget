@@ -1,5 +1,5 @@
 import de.bezier.guido.*;
-TargetButton [] targets = new TargetButton[32];
+TargetButton [] targets = new TargetButton[64];
 ArrayList <Integer> nums = new ArrayList <Integer>();
 int numNums = int(random(900)+100);
 int startNum = int(random(900));
