@@ -7,23 +7,23 @@ int numToFind= startNum+int(random(numNums));
 int numGuesses = 0;
 boolean numFound = false;
 int low = 0;
-int high = 31;
+int high = 63;
 public void setup()
 {
   size(1000, 300);
   textAlign(CENTER, CENTER);
   Interactive.make( this );
-  while(nums.size()<32)
+  while(nums.size()<high+1)
   {
     int num = startNum+int(random(numNums));
     if(!nums.contains(num))
       nums.add(num);
   }
-  int[] numsArray = new int[32];
-  for(int i = 0; i < 32; i++)
+  int[] numsArray = new int[high+1];
+  for(int i = 0; i < high+1; i++)
     numsArray[i] = nums.get(i);
   numsArray = sort(numsArray);
-  for(int i = 0; i < 32; i++)
+  for(int i = 0; i < high+1; i++)
     nums.set(i,numsArray[i]);
   if (!nums.contains(numToFind) && random(1)<.6)
     while (!nums.contains(numToFind))
